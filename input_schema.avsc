@@ -30,7 +30,8 @@
       "protectedClass": false,
       "driftCandidate": true,
       "specialValues": [],
-      "scoringOptional": false
+      "scoringOptional": false,
+      "isAmountField": true
     },
     {
       "name": "installment_rate",
@@ -220,7 +221,8 @@
       "protectedClass": false,
       "driftCandidate": true,
       "specialValues": [],
-      "scoringOptional": true
+      "scoringOptional": true,
+      "positiveClassLabel":1
     },
     {
       "name": "score",

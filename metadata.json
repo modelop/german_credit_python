@@ -1,0 +1,13 @@
+{
+	"roi":{
+		"baselineMetricsTNR": 0.877,
+    		"baselineMetricsTPR": 0.531,
+    		"costMultipliersTP": 1.5,
+    		"costMultipliersFP": -2,
+    		"costMultipliersTN": 2,
+    		"costMultipliersFN": -1.5
+	},
+	"custom": {
+        	"modelopPackageVersion": "0.13.2"
+    	}
+}

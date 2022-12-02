@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_0wb2acp" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.5.0">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="Definitions_0wb2acp" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.10.0">
   <decision id="Decision_0q87m1a" name="Model Test Comparator">
     <decisionTable id="decisionTable_1" hitPolicy="COLLECT" biodi:annotationsWidth="400">
-      <input id="input_1" label="gender_female_statistical_parity" biodi:width="150" camunda:inputVariable="gender_female_statistical_parity">
+      <input id="input_1" label="pprev_disparity" biodi:width="150" camunda:inputVariable="pprev_disparity">
         <inputExpression id="inputExpression_1" typeRef="double" expressionLanguage="feel">
           <text></text>
         </inputExpression>
       </input>
-      <input id="InputClause_08e7ybd" label="gender_female_impact_parity" biodi:width="150" camunda:inputVariable="gender_female_impact_parity">
+      <input id="InputClause_08e7ybd" label="pprev_disparity" biodi:width="150" camunda:inputVariable="pprev_disparity">
         <inputExpression id="LiteralExpression_0nr86e9" typeRef="double" expressionLanguage="feel">
           <text></text>
         </inputExpression>
@@ -26,7 +26,7 @@
           <text>false</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_07v4w07">
-          <text>"Female Statistical Parity Below Threshold of 0.8"</text>
+          <text>"Predicted Prevalence Disparity Below Threshold of 0.8"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1ub6nly">
           <text>"EthicalFairness"</text>
@@ -37,13 +37,13 @@
           <text></text>
         </inputEntry>
         <inputEntry id="UnaryTests_1u0j72q">
-          <text>&lt;= 0.8</text>
+          <text>&gt;= 1.25</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1id0elh">
           <text>false</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_1qpb76t">
-          <text>"Female Impact Parity Below Threshold of 0.8"</text>
+          <text>"Predicted Prevalence Disarity Above Threshold of 1.25"</text>
         </outputEntry>
         <outputEntry id="LiteralExpression_09zevgh">
           <text>"EthicalFairness"</text>
