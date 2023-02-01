@@ -56,7 +56,11 @@ def metrics(data):
 
     # Process DataFrame
     data_scored_processed, _ = preprocess_input_df(data_scored)
-
+    
+    print(data_scored_processed.head())
+    print(data_scored_processed['gender'].unique())
+    print(data_scored_processed['gender'])
+    
     # Group Metrics
     g = Group()
     xtab, _ = g.get_crosstabs(data_scored_processed)
