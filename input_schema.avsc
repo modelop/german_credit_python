@@ -221,8 +221,7 @@
       "protectedClass": false,
       "driftCandidate": true,
       "specialValues": [],
-      "scoringOptional": true,
-      "positiveClassLabel":1
+      "scoringOptional": true
     },
     {
       "name": "score",
