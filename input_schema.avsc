@@ -13,6 +13,17 @@
       "scoringOptional": false
     },
     {
+      "dataClass": "numerical",
+      "driftCandidate": false,
+      "name": "date",
+      "protectedClass": false,
+      "role": "prediction_date",
+      "scoringOptional": false,
+      "specialValues": [
+      ],
+      "type": "string"
+    },
+    {
       "name": "duration_months",
       "type": "int",
       "dataClass": "numerical",
