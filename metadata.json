@@ -1,11 +1,11 @@
 {
 	"modelMethodology": "LLM",
-	"modelStage": "DEV",
+	"modelStage": "PROD",
 	"roi":{
 		"baselineMetricsTNR": 0.877,
     		"baselineMetricsTPR": 0.531,
     		"costMultipliersTP": 1.5,
-    		"costMultipliersFP": -2,
+    		"costMultipliersFP": -222,
     		"costMultipliersTN": 2,
     		"costMultipliersFN": -1.5
 	},
