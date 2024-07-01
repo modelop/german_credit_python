@@ -1,4 +1,6 @@
 {
+	"modelMethodology": "LLM",
+	"modelStage": "DEV",
 	"roi":{
 		"baselineMetricsTNR": 0.877,
     		"baselineMetricsTPR": 0.531,
