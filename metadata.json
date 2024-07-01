@@ -11,5 +11,6 @@
 	},
 	"custom": {
         	"modelopPackageVersion": "0.15.2"
-    	}
+    	},
+			"modelRisk": "LOW"
 }
