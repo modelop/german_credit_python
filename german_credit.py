@@ -52,6 +52,8 @@ def metrics(data):
     # To measure Bias towards gender, filter DataFrame
     # to "score", "label_value" (ground truth), and
     # "gender" (protected attribute)
+    if "label" in data:
+        data.rename(columns={"label": "label_value"}, inplace=True)
     data_scored = data[["score", "label_value", "gender"]]
 
     # Process DataFrame
