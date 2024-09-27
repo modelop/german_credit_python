@@ -1,4 +1,4 @@
-aequitas==1.0.0
+aequitas==0.42.0
 numpy==1.24.4
 pandas==2.1.4
 scikit-learn==1.4.0
