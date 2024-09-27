@@ -22,6 +22,7 @@ def begin():
 
 # modelop.score
 def action(data):
+    # Test 1: Commit 2 reset
 
     # Turn data into DataFrame
     data = pd.DataFrame([data])
