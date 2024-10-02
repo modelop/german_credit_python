@@ -13,9 +13,10 @@ from aequitas.bias import Bias
 
 # modelop.init
 def begin():
+    # A new commit
 
     global logreg_classifier
-    
+
     # load pickled logistic regression model
     logreg_classifier = pickle.load(open("logreg_classifier.pickle", "rb"))
 
