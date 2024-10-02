@@ -15,6 +15,7 @@ from aequitas.bias import Bias
 def begin():
     # A new commit
     # Test 2
+    # Test 3
 
     global logreg_classifier
 
