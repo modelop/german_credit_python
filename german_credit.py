@@ -13,10 +13,6 @@ from aequitas.bias import Bias
 
 # modelop.init
 def begin():
-    # A new commit
-    # Test 2
-    # Test 3
-
     global logreg_classifier
 
     # load pickled logistic regression model
@@ -25,8 +21,6 @@ def begin():
 
 # modelop.score
 def action(data):
-    # Test 1: Commit 2 reset
-
     # Turn data into DataFrame
     data = pd.DataFrame([data])
 
