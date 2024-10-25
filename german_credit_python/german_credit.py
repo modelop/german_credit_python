@@ -103,4 +103,5 @@ def metrics(data):
     output_metrics_df = disparity_metrics_df # or absolute_metrics_df
 
     # Output a JSON object of calculated metrics
+    # Test 7287
     yield output_metrics_df.to_dict(orient="records")
