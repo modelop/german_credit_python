@@ -226,7 +226,7 @@
     },
     {
       "name": "score",
-      "type": "int",
+      "type": "string",
       "dataClass": "categorical",
       "role": "score",
       "protectedClass": false,
