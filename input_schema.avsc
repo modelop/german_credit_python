@@ -13,27 +13,6 @@
       "scoringOptional": false
     },
     {
-      "name": "duration_months",
-      "type": "int",
-      "dataClass": "numerical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false
-    },
-    {
-      "name": "credit_amount",
-      "type": "float",
-      "dataClass": "numerical",
-      "role": "predictor",
-      "protectedClass": false,
-      "driftCandidate": true,
-      "specialValues": [],
-      "scoringOptional": false,
-      "isAmountField": true
-    },
-    {
       "name": "installment_rate",
       "type": "int",
       "dataClass": "numerical",
