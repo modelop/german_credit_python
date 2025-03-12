@@ -23,6 +23,5 @@ soupsieve
 sqlparse
 urllib3
 boto3
-tensorflow
 keras
 pygame
