@@ -25,3 +25,8 @@ urllib3
 boto3
 keras
 pygame
+seaborn
+plotly
+nltk
+gensim
+theano
