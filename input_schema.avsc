@@ -3,91 +3,91 @@
    "name": "input_schema.avsc",
    "fields": [
         {
-            "name": "id",
+            "name": "ID",
             "type": "int"
         },
         {
-            "name": "number_people_liable",
+            "name": "NUMBER_PEOPLE_LIABLE",
             "type": "int"
         },
         {
-            "name": "age_years",
+            "name": "AGE_YEARS",
             "type": "int"
         },
         {
-            "name": "present_employment_since",
+            "name": "PRESENT_EMPLOYMENT_SINCE",
             "type": "string"
         },
         {
-            "name": "job",
+            "name": "JOB",
             "type": "string"
         },
         {
-            "name": "housing",
+            "name": "HOUSING",
             "type": "string"
         },
         {
-            "name": "telephone",
+            "name": "TELEPHONE",
             "type": "string"
         },
         {
-            "name": "installment_plans",
+            "name": "INSTALLMENT_PLANS",
             "type": "string"
         },
         {
-            "name": "number_existing_credits",
+            "name": "NUMBER_EXISTING_CREDITS",
             "type": "int"
         },
         {
-            "name": "credit_history",
+            "name": "CREDIT_HISTORY",
             "type": "string"
         },
         {
-            "name": "foreign_worker",
+            "name": "FOREIGN_WORKER",
             "type": "string"
         },
         {
-            "name": "property",
+            "name": "PROPERTY",
             "type": "string"
         },
         {
-            "name": "installment_rate",
+            "name": "INSTALLMENT_RATE",
             "type": "int"
         },
         {
-            "name": "purpose",
+            "name": "PURPOSE",
             "type": "string"
         },
         {
-            "name": "checking_status",
+            "name": "CHECKING_STATUS",
             "type": "string"
         },
         {
-            "name": "present_residence_since",
+            "name": "PRESENT_RESIDENCE_SINCE",
             "type": "int"
         },
         {
-            "name": "debtors_guarantors",
+            "name": "DEBTORS_GUARANTORS",
             "type": "string"
         },
         {
-            "name": "savings_account",
+            "name": "SAVINGS_ACCOUNT",
             "type": "string"
         },
         {
-            "name": "duration_months",
+            "name": "DURATINO_MONTHS",
             "type": "int"
         },
         {
-            "name": "credit_amount",
+            "name": "CREDIT_AMOUNT",
             "type": "int"
         },
         {
-            "name": "gender",
+            "name": "GENDER",
             "type": "string"
         },
         {
-            "name": "label",
+            "name": "LABEL",
             "type": "int"
         }
     ]
