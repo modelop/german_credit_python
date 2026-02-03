@@ -102,7 +102,7 @@ def metrics(data):
 
     output_metrics_df = disparity_metrics_df # or absolute_metrics_df
     try:
-        print(json.loads(output_metrics_df.to_dict(orient="records"))
+        print(json.loads(output_metrics_df.to_dict(orient="records")))
     except:
         print(output_metrics_df)
         output_metrics_df.to_csv("out.csv", index=False)
