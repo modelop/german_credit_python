@@ -104,7 +104,9 @@ def metrics(data):
     try:
         print(json.loads(output_metrics_df.to_dict(orient="records")))
     except:
-        print(output_metrics_df)
+        print("something messed up")
+        with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+            print(output_metrics_df)
         output_metrics_df.to_csv("out.csv", index=False)
     # Output a JSON object of calculated metrics
     # yield output_metrics_df.to_dict(orient="records")
