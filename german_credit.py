@@ -128,6 +128,7 @@ def metrics(data):
     try:
         output_metrics = output_metrics_df.to_dict(orient="records")
         for record in output_metrics:
+            print(record)
             fix_numpy_nans_and_infs_in_dict(record)
         # output_metrics = fix_numpy_nans_and_infs_in_dict(output_metrics_df.to_dict(orient="records"))
         print(json.loads(output_metrics))
