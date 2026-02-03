@@ -60,9 +60,9 @@ def fix_numpy_nans_and_infs_in_dict(values: dict) -> dict:
         # If True, change to None, else keep unchanged
         if val is not None:
             try:  # Some values are not numeric
-                if numpy.isnan(val):
+                if np.isnan(val):
                     values[key] = None
-                elif numpy.isinf(val):
+                elif np.isinf(val):
                     values[key] = None
             except TypeError:
                 pass
