@@ -125,20 +125,23 @@ def metrics(data):
     """
 
     output_metrics_df = disparity_metrics_df # or absolute_metrics_df
-    try:
-        output_metrics = output_metrics_df.to_dict(orient="records")
-        for record in output_metrics:
-            print(record)
-            fix_numpy_nans_and_infs_in_dict(record)
-        # output_metrics = fix_numpy_nans_and_infs_in_dict(output_metrics_df.to_dict(orient="records"))
-        print(json.loads(output_metrics))
-    except Exception as error:
-        print("something messed up")
-        print(error)
-        print(fix_numpy_nans_and_infs_in_dict(output_metrics_df.to_dict(orient="records")))
-        with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-            print(output_metrics_df)
-        output_metrics_df.to_csv("out.csv", index=False)
+    # try:
+    #     output_metrics = output_metrics_df.to_dict(orient="records")
+    #     for record in output_metrics:
+    #         print(record)
+    #         fix_numpy_nans_and_infs_in_dict(record)
+    #     # output_metrics = fix_numpy_nans_and_infs_in_dict(output_metrics_df.to_dict(orient="records"))
+    #     print(json.dumps(output_metrics))
+    # except Exception as error:
+    #     print("something messed up")
+    #     print(error)
+    #     with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+    #         print(output_metrics_df)
+    #     output_metrics_df.to_csv("out.csv", index=False)
     # Output a JSON object of calculated metrics
-    # yield output_metrics_df.to_dict(orient="records")
-    yield {"toy": "car"}
+    output_metrics = output_metrics_df.to_dict(orient="records")
+    for record in output_metrics:
+        print(record)
+        fix_numpy_nans_and_infs_in_dict(record)
+    yield output_metrics
+    # yield {"toy": "car"}
