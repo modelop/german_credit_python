@@ -1,6 +1,6 @@
 # modelop.schema.0: input_schema.avsc
 # modelop.schema.1: output_schema.avsc
-
+import json
 import pandas as pd
 import pickle
 import numpy as np
@@ -101,6 +101,11 @@ def metrics(data):
     """
 
     output_metrics_df = disparity_metrics_df # or absolute_metrics_df
-
+    try:
+        print(json.loads(output_metrics_df.to_dict(orient="records"))
+    except:
+        print(output_metrics_df)
+        output_metrics_df.to_csv("out.csv", index=False)
     # Output a JSON object of calculated metrics
-    yield output_metrics_df.to_dict(orient="records")
+    # yield output_metrics_df.to_dict(orient="records")
+    yield {"toy": "car"}
