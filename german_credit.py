@@ -106,6 +106,7 @@ def metrics(data):
     except Exception as error:
         print("something messed up")
         print(error)
+        print(output_metrics_df.to_dict(orient="records"))
         with pd.option_context('display.max_rows', None, 'display.max_columns', None):
             print(output_metrics_df)
         output_metrics_df.to_csv("out.csv", index=False)
