@@ -126,7 +126,10 @@ def metrics(data):
 
     output_metrics_df = disparity_metrics_df # or absolute_metrics_df
     try:
-        output_metrics = fix_numpy_nans_and_infs_in_dict(output_metrics_df.to_dict(orient="records"))
+        output_metrics = output_metrics_df.to_dict(orient="records")
+        for record in output_metrics:
+            fix_numpy_nans_and_infs_in_dict(record)
+        # output_metrics = fix_numpy_nans_and_infs_in_dict(output_metrics_df.to_dict(orient="records"))
         print(json.loads(output_metrics))
     except Exception as error:
         print("something messed up")
