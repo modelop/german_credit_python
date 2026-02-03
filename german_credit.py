@@ -44,6 +44,30 @@ def action(data):
     # MOC expects the action function to be a *yield* function
     yield data.to_dict(orient="records")
 
+def fix_numpy_nans_and_infs_in_dict(values: dict) -> dict:
+    """A function to change all numpy.nan and numpy.inf values in a flat dictionary to python Nones.
+
+    Args:
+        values (dict): Input dict to fix.
+        test_name (str):  Name of test that's calling this function.
+
+    Returns:
+        dict: Fixed dict.
+    """
+
+    for key, val in values.items():
+        # If value is numeric (not None), check for numpy.nan and numpy.inf
+        # If True, change to None, else keep unchanged
+        if val is not None:
+            try:  # Some values are not numeric
+                if numpy.isnan(val):
+                    values[key] = None
+                elif numpy.isinf(val):
+                    values[key] = None
+            except TypeError:
+                pass
+
+    return values
 
 # modelop.metrics
 def metrics(data):
@@ -102,12 +126,12 @@ def metrics(data):
 
     output_metrics_df = disparity_metrics_df # or absolute_metrics_df
     try:
-        output_metrics_df = output_metrics_df.fillna(None)
-        print(json.loads(output_metrics_df.to_dict(orient="records")))
+        output_metrics = fix_numpy_nans_and_infs_in_dict(output_metrics_df.to_dict(orient="records"))
+        print(json.loads(output_metrics))
     except Exception as error:
         print("something messed up")
         print(error)
-        print(output_metrics_df.to_dict(orient="records"))
+        print(fix_numpy_nans_and_infs_in_dict(output_metrics_df.to_dict(orient="records")))
         with pd.option_context('display.max_rows', None, 'display.max_columns', None):
             print(output_metrics_df)
         output_metrics_df.to_csv("out.csv", index=False)
