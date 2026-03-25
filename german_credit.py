@@ -13,8 +13,6 @@ from aequitas.bias import Bias
 
 # modelop.init
 def begin():
-    # again again
-    # Test 1, commit 2
     global logreg_classifier
 
     # load pickled logistic regression model
@@ -23,7 +21,6 @@ def begin():
 
 # modelop.score
 def action(data):
-    # Test 1, commit 2
     # Turn data into DataFrame
     data = pd.DataFrame([data])
 
@@ -41,7 +38,6 @@ def action(data):
     ]
 
     data["score"] = logreg_classifier.predict(data[predictive_features])
-    # never
 
     # MOC expects the action function to be a *yield* function
     yield data.to_dict(orient="records")
@@ -49,7 +45,6 @@ def action(data):
 
 # modelop.metrics
 def metrics(data):
-    # Test 2, commit 2
 
     data = pd.DataFrame(data)
 
